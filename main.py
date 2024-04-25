@@ -53,6 +53,9 @@ def create_resized_faces():
         print(f"resizing {subdir}")
         resize_face(path+f"/{subdir}", f"./faces_resized/{subdir}")
 
+if not os.path.isdir('./faces_resized'):
+    create_resized_faces()
+
 train_dataset = keras.utils.image_dataset_from_directory(
     "./faces_resized",
     shuffle=True,
