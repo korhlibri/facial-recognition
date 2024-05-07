@@ -12,6 +12,7 @@ matplotlib = "*"
 keras-applications = "*"
 
 [dev-packages]
+Werkzeug = ">=3.0.3"
 
 [requires]
 python_version = "3.11"
